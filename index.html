@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⌘ Git<span>Hub</span> Guide</div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#git">Git</a>
+        <a href="#github">GitHub</a>
+        <a href="#comandos">Comandos</a>
+    </nav>
+    <button id="themeBtn" class="theme-btn">🌙</button>
+</header>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h3>APRENDIZAJE</h3>
+        <a href="#inicio">🏠 Inicio</a>
+        <a href="#git">📚 ¿Qué es Git?</a>
+        <a href="#github">🌐 ¿Qué es GitHub?</a>
+        <a href="#instalacion">⚙️ Instalación</a>
+
+        <h3>COMANDOS</h3>
+        <a href="#configuracion">🔧 Configuración</a>
+        <a href="#repositorios">📁 Repositorios</a>
+        <a href="#seguimiento">📝 Seguimiento</a>
+        <a href="#ramas">🌿 Ramas</a>
+        <a href="#github-comandos">☁️ GitHub</a>
+
+        <h3>PRÁCTICA</h3>
+        <a href="#flujo">🚀 Flujo de trabajo</a>
+        <a href="#recursos">📖 Recursos</a>
+    </aside>
+
+    <main class="content">
+
+        <section id="inicio" class="hero">
+            <span class="tag">GUÍA PARA PRINCIPIANTES</span>
+            <h1>Aprende Git & <span>GitHub</span></h1>
+            <p>
+                Domina el control de versiones, administra tus proyectos
+                y aprende a trabajar como un desarrollador profesional.
+            </p>
+            <a href="#git" class="primary-btn">Comenzar aprendizaje →</a>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h2>01</h2>
+                <p>Aprende Git</p>
+            </div>
+            <div class="stat-card">
+                <h2>02</h2>
+                <p>Conoce GitHub</p>
+            </div>
+            <div class="stat-card">
+                <h2>03</h2>
+                <p>Practica comandos</p>
+            </div>
+        </section>
+
+        <section id="git" class="section">
+            <span class="tag">INTRODUCCIÓN</span>
+            <h2>¿Qué es Git?</h2>
+            <p>
+                Git es un sistema de control de versiones que permite
+                registrar los cambios realizados en un proyecto.
+                Puedes recuperar versiones anteriores y trabajar
+                con diferentes ramas.
+            </p>
+
+            <div class="info-card">
+                <h3>💡 ¿Para qué sirve?</h3>
+                <ul>
+                    <li>Guardar el historial de cambios.</li>
+                    <li>Recuperar versiones anteriores.</li>
+                    <li>Trabajar en equipo.</li>
+                    <li>Crear ramas independientes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="github" class="section">
+            <span class="tag">PLATAFORMA</span>
+            <h2>¿Qué es GitHub?</h2>
+            <p>
+                GitHub es una plataforma que permite alojar repositorios
+                Git en internet y colaborar con otros desarrolladores.
+            </p>
+
+            <div class="info-card">
+                <h3>🚀 Características principales</h3>
+                <ul>
+                    <li>Almacenar proyectos en la nube.</li>
+                    <li>Compartir código.</li>
+                    <li>Trabajar mediante Pull Requests.</li>
+                    <li>Reportar errores con Issues.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="instalacion" class="section">
+            <h2>⚙️ Instalación de Git</h2>
+            <p>Descarga Git desde su página oficial:</p>
+            <a href="https://git-scm.com/downloads" target="_blank">
+                Descargar Git →
+            </a>
+            <p>Comprueba la instalación desde la terminal:</p>
+            <div class="code">
+                <code>git --version</code>
+                <button class="copy-btn">Copiar</button>
+            </div>
+        </section>
+
+        <section id="configuracion" class="section">
+            <h2>🔧 Configuración inicial</h2>
+            <p>Configura tu nombre y correo electrónico:</p>
+
+            <div class="command">
+                <p>Configurar usuario</p>
+                <div class="code">
+                    <code>git config --global user.name "Tu Nombre"</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Configurar correo</p>
+                <div class="code">
+                    <code>git config --global user.email "correo@email.com"</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Ver configuración</p>
+                <div class="code">
+                    <code>git config --list</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="repositorios" class="section">
+            <h2>📁 Comandos de repositorios</h2>
+
+            <div class="command">
+                <p>Inicializar un repositorio</p>
+                <div class="code">
+                    <code>git init</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Clonar un repositorio</p>
+                <div class="code">
+                    <code>git clone URL_DEL_REPOSITORIO</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Ver el estado del proyecto</p>
+                <div class="code">
+                    <code>git status</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="seguimiento" class="section">
+            <h2>📝 Seguimiento de cambios</h2>
+
+            <div class="command">
+                <p>Agregar todos los archivos</p>
+                <div class="code">
+                    <code>git add .</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Agregar un archivo específico</p>
+                <div class="code">
+                    <code>git add index.html</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Guardar cambios</p>
+                <div class="code">
+                    <code>git commit -m "Mi primer commit"</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Consultar historial</p>
+                <div class="code">
+                    <code>git log --oneline</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ramas" class="section">
+            <h2>🌿 Comandos de ramas</h2>
+
+            <div class="command">
+                <p>Ver ramas</p>
+                <div class="code">
+                    <code>git branch</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Crear una rama</p>
+                <div class="code">
+                    <code>git branch nueva-rama</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Cambiar de rama</p>
+                <div class="code">
+                    <code>git switch nueva-rama</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Crear y cambiar de rama</p>
+                <div class="code">
+                    <code>git switch -c nueva-rama</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Unir ramas</p>
+                <div class="code">
+                    <code>git merge nueva-rama</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="github-comandos" class="section">
+            <h2>☁️ Comandos de GitHub</h2>
+
+            <div class="command">
+                <p>Conectar repositorio remoto</p>
+                <div class="code">
+                    <code>git remote add origin URL</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Ver repositorios remotos</p>
+                <div class="code">
+                    <code>git remote -v</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Subir cambios a GitHub</p>
+                <div class="code">
+                    <code>git push -u origin main</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Descargar cambios del repositorio</p>
+                <div class="code">
+                    <code>git pull origin main</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+
+            <div class="command">
+                <p>Descargar cambios sin fusionarlos</p>
+                <div class="code">
+                    <code>git fetch</code>
+                    <button class="copy-btn">Copiar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="flujo" class="section">
+            <h2>🚀 Flujo de trabajo básico</h2>
+            <p>Este es el proceso habitual para subir tus cambios:</p>
+
+            <div class="workflow">
+                <div>01. Crear o modificar archivos</div>
+                <div>02. git status</div>
+                <div>03. git add .</div>
+                <div>04. git commit -m "Cambios"</div>
+                <div>05. git push origin main</div>
+            </div>
+        </section>
+
+        <section id="recursos" class="section">
+            <h2>📖 Recursos para aprender más</h2>
+            <div class="info-card">
+                <p><a href="https://git-scm.com/doc" target="_blank">Documentación oficial de Git</a></p>
+                <p><a href="https://docs.github.com/es" target="_blank">Documentación de GitHub</a></p>
+                <p><a href="https://docs.github.com/en/get-started/git-basics/git-cheatsheet" target="_blank">Git Cheat Sheet</a></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Git & GitHub Guide | Aprende, practica y desarrolla.</p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
